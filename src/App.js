@@ -1,19 +1,33 @@
 import React from 'react';
 import "./App.css"
-import Menu from './Components/Menu';
-import Trailer from './Components/Trailer'
+import SideBar from './Components/SideBar';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Appoinment from './Pages/Appoinment';
+import Home from './Pages/Home';
+import Logout from './Pages/Logout';
+import Notes from './Pages/Notes';
 
 export default function App() {
 
   return (
     <div className='App'>
 
-      <h1> Meals DB</h1>
+      <BrowserRouter>
+        <SideBar>
+          <Routes>
+             <Route path="/Notes" element={<Notes />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/Appoinment" element={<Appoinment />} />
+            <Route path="/Logout" element={<Logout />} />
 
-     <Trailer/>
-      <Menu/>
-      
-     
+          </Routes>
+
+        </SideBar>
+      </BrowserRouter>
+
+
+
     </div>
   );
 }
