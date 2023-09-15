@@ -2,12 +2,9 @@ import * as React from 'react';
 import Box from '@mui/joy/Box';
 import IconButton from '@mui/joy/IconButton';
 import List from '@mui/joy/List';
-// import HomeIcon from '@mui/icons-material/Home';
-// import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import Sheet from '@mui/joy/Sheet';
-// import PersonIcon from '@mui/icons-material/Person';
 import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
@@ -25,26 +22,9 @@ export default function SideBar({children}) {
             name: "Notes",
             icon: <DescriptionIcon />,
         },
-        // {
-        //     path: "/",
-        //     name: "Home",
-        //     icon: <HomeIcon />,
-        // },
-        // {
-        //     path: "/Appoinment",
-        //     name: "Appoinment",
-        //     icon: <BookOnlineIcon />,
-        // },
-        // {
-        //     path: "/Logout",
-        //     name: "Logout",
-        //     icon: <PersonIcon />,
-        // }
+        
 
     ]
-
-
-
 
     return (
         <Box className='container'
@@ -76,10 +56,8 @@ export default function SideBar({children}) {
                     <div className='Dashboard-div'>
                         <ListItemButton style={{ display: isopen ? "block" : "none" }}>
                             <ListItemDecorator  >
-                                Schedula
+                                NOTE APP
                             </ListItemDecorator>
-
-
                         </ListItemButton>
 
                         <IconButton style={{ marginLeft: isopen ? "40px" : "0px" }} >
@@ -108,27 +86,6 @@ export default function SideBar({children}) {
                             </NavLink>))
                     }
 
-
-                    {/* <div className='Dashboard-div1'>
-
-                        <IconButton  >
-                            <BookOnlineIcon style={{ marginLeft: isopen ? "40px" : "0px" }} />
-                        </IconButton>
-                        <ListItemButton style={{ display: isopen ? "block" : "none" }}>
-                            My Appoinment
-                        </ListItemButton>
-
-                    </div>
-                    <div className='Dashboard-div1'>
-
-                        <IconButton  >
-                            <PersonIcon style={{ marginLeft: isopen ? "40px" : "0px" }} />
-                        </IconButton>
-                        <ListItemButton style={{ display: isopen ? "block" : "none" }}>
-                            Log Out
-                        </ListItemButton>
-
-                    </div> */}
 
                 </List>
                 <IconButton
